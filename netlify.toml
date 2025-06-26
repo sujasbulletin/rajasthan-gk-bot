@@ -1,0 +1,45 @@
+[build]
+  functions = "netlify/functions"
+  
+[build.environment]
+  NODE_VERSION = "18"
+
+# Scheduled Functions for Automation
+[[functions]]
+  name = "morningPoll"
+  schedule = "0 9 * * *"  # 9:00 AM IST daily
+
+[[functions]]
+  name = "eveningAnswer"
+  schedule = "0 18 * * *" # 6:00 PM IST daily
+
+[[functions]]
+  name = "motivationalQuote"
+  schedule = "0 7 * * *"  # 7:00 AM IST daily
+
+[[functions]]
+  name = "currentAffairs"
+  schedule = "0 8 * * *"  # 8:00 AM IST daily
+
+[[functions]]
+  name = "schemeHighlight"
+  schedule = "0 12 * * *" # 12:00 PM IST daily
+
+[[functions]]
+  name = "studyTip"
+  schedule = "0 14 * * *" # 2:00 PM IST daily
+
+[[functions]]
+  name = "culturalContent"
+  schedule = "0 17 * * *" # 5:00 PM IST daily
+
+[[functions]]
+  name = "nightQuote"
+  schedule = "0 21 * * *" # 9:00 PM IST daily
+
+# Manual trigger endpoints
+[[functions]]
+  name = "manualPost"
+  
+[[functions]]
+  name = "getStats"
