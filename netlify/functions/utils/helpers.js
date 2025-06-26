@@ -3,7 +3,7 @@ const path = require('path');
 
 class DatabaseHelper {
   constructor() {
-    this.dataPath = path.join(process.cwd(), 'data', 'questions.json');
+    this.dataPath = path.join(__dirname, '../../../data', 'questions.json');
   }
 
   /**
