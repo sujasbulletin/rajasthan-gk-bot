@@ -1,0 +1,21 @@
+{
+  "name": "rajasthan-gk-bot",
+  "version": "1.0.0",
+  "description": "Automated Twitter bot for Rajasthan General Knowledge content",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "twitter-api-v2": "^1.16.1"
+  },
+  "keywords": [
+    "twitter-bot",
+    "rajasthan",
+    "general-knowledge",
+    "automation",
+    "netlify"
+  ],
+  "author": "SujasBulletin",
+  "license": "MIT"
+}
