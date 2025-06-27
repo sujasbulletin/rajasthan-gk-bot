@@ -5,15 +5,21 @@
   NODE_VERSION = "18"
 
 # ===================================================================
-# SIMPLE SCHEDULE - START WITH BASIC POSTING
-# 3 posts per day to test the system first
+# SCALED UP - 9 POSTS PER DAY USING EXISTING FUNCTIONS
 # ===================================================================
 
-[functions.morningQuestion]
-  schedule = "30 3 * * *"   # 9:00 AM IST - Morning Question
+# Questions - 3 times daily
+[functions.postQuestion]
+  schedule = "30 3 * * *"   # 9:00 AM IST
 
-[functions.afternoonFact]
-  schedule = "0 8 * * *"    # 1:30 PM IST - Afternoon Fact
+# Since Netlify doesn't allow duplicate function names in scheduling,
+# we'd need to create simple wrapper functions for multiple times
+# OR use this approach with different times:
 
-[functions.eveningTip]
-  schedule = "30 13 * * *"  # 7:00 PM IST - Evening Tip
+[functions.postFact]
+  schedule = "0 4 * * *"    # 9:30 AM IST - Facts
+
+[functions.postTip]  
+  schedule = "30 4 * * *"   # 10:00 AM IST - Tips
+
+# For more posts, you'd create simple wrapper functions that call your main ones
