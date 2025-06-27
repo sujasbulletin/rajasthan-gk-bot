@@ -80,7 +80,7 @@
   path = "netlify/functions/postFact.js"
   schedule = "30 15 * * *"  # 9:00 PM IST
 
-# Function Configuration
-[functions]
+# Global function settings
+[functions."*"]
   timeout = 30
   memory = 256
