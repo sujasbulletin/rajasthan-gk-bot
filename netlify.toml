@@ -3,3 +3,13 @@
   
 [build.environment]
   NODE_VERSION = "18"
+
+# Scheduled Functions - Runs automatically
+[[functions]]
+  path = "netlify/functions/morningPoll.js"
+  schedule = "30 3 * * *"  # 9:00 AM IST = 3:30 AM UTC
+  
+# Optional: Add error handling
+[functions.morningPoll]
+  timeout = 30
+  memory = 256
